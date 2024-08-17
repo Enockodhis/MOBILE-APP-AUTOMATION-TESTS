@@ -11,9 +11,11 @@ This repository contains automated tests for the M-Pesa mobile application. The 
 - Automated navigation to mini-apps within the M-Pesa app.
 
 
-![image](https://github.com/user-attachments/assets/40fa56b7-01d3-4f5b-8dd6-3d99ffa8d2db)
+![image](https://github.com/user-attachments/assets/fe70bab6-3c20-4505-a900-e6a4de19fd7c)
+![image](https://github.com/user-attachments/assets/4b240a4d-ed58-4c51-91f7-f72ccffe9d50)
 
-![image](https://github.com/user-attachments/assets/0cd7767b-ff31-4886-8e11-afbc76042096)
+
+
 
 ## 2. Prerequisites
 
