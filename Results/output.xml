@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-08-19T12:54:21.930499" rpa="false" schemaversion="5">
+<suite id="s1" name="TS 003 LaunchMiniapp" source="C:\Users\pc\Desktop\Mobile App Automation\Tests\TS_003_LaunchMiniapp.robot">
+<test id="s1-t1" name="TC001 Login M-pesa App using Invalid Pin" line="9">
+<kw name="SignIN M-pesa App" owner="Keywords">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=2850bf41</arg>
+<arg>appPackage=com.safaricom.mpesa.lifestyle</arg>
+<arg>appActivity=com.mpesa.splash.SplashActivity</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>noReset=true</arg>
+<arg>captureScreenshots=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-08-19T12:54:22.383662" elapsed="15.173811"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:38.054008" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/SignInPage.png"&gt;&lt;img src="Screenshots/SignInPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}SignInPage.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:54:37.557473" elapsed="0.496535"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:54:22.383662" elapsed="15.685894"/>
+</kw>
+<kw name="Given User want to sign-in to M-pesa app and the user clicks on mpesa app icon" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:41.775309" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="EO"]
+xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="EO"]</msg>
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:54:38.072421" elapsed="3.702888"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:42.317199" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/SignInButtonVisible.png"&gt;&lt;img src="Screenshots/SignInButtonVisible.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}SignInButtonVisible.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:54:41.775309" elapsed="0.541890"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:54:38.071424" elapsed="4.245775"/>
+</kw>
+<kw name="Then the user is prompted to enter login pin" owner="Keywords">
+<kw name="Input PIN" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:42.633563" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_1}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:54:42.330012" elapsed="0.303551"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:42.633563" level="INFO">Clicking element '//android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]'.</msg>
+<msg time="2024-08-19T12:54:43.035087" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:54:42.633563" elapsed="0.401524"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:43.050749" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="1"]'.</msg>
+<msg time="2024-08-19T12:54:43.642597" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="1"]</msg>
+<arg>${KEY_${PIN[0]}}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:54:43.035087" elapsed="0.607510"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T12:54:44.143136" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T12:54:43.642597" elapsed="0.500960"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:44.452462" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_2}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:54:44.143557" elapsed="0.308905"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:44.452462" level="INFO">Clicking element '//android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]'.</msg>
+<msg time="2024-08-19T12:54:44.956750" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:54:44.452462" elapsed="0.504288"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:44.972305" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="2"]'.</msg>
+<msg time="2024-08-19T12:54:45.573665" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="2"]</msg>
+<arg>${KEY_${PIN[1]}}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:54:44.956750" elapsed="0.616915"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T12:54:46.074201" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T12:54:45.573665" elapsed="0.500536"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:46.464226" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_3}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:54:46.074201" elapsed="0.390025"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:46.464226" level="INFO">Clicking element '//android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]'.</msg>
+<msg time="2024-08-19T12:54:46.929602" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:54:46.464226" elapsed="0.465376"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:46.929602" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="3"]'.</msg>
+<msg time="2024-08-19T12:54:47.443386" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="3"]</msg>
+<arg>${KEY_${PIN[2]}}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:54:46.929602" elapsed="0.513784"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T12:54:47.959407" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T12:54:47.459018" elapsed="0.500389"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:48.205952" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_4}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:54:47.959407" elapsed="0.246545"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:48.221856" level="INFO">Clicking element '//android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]'.</msg>
+<msg time="2024-08-19T12:54:48.574111" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_4}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:54:48.205952" elapsed="0.368159"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:48.589783" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="4"]'.</msg>
+<msg time="2024-08-19T12:54:49.041382" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="4"]</msg>
+<arg>${KEY_${PIN[3]}}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:54:48.574111" elapsed="0.467271"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T12:54:49.541949" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T12:54:49.041382" elapsed="0.500567"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:49.980291" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/PINInputComplete.png"&gt;&lt;img src="Screenshots/PINInputComplete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}PINInputComplete.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:54:49.541949" elapsed="0.438342"/>
+</kw>
+<arg>${INVALID_PIN}</arg>
+<status status="PASS" start="2024-08-19T12:54:42.330012" elapsed="7.650279"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:50.398260" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/InvalidPINEntered.png"&gt;&lt;img src="Screenshots/InvalidPINEntered.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}InvalidPINEntered.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:54:49.980291" elapsed="0.417969"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:54:42.329013" elapsed="8.069247"/>
+</kw>
+<kw name="When the user inputs invalid pin the app should prevent them from logging in" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:52.657365" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="EO"]</msg>
+<arg>${SIGN_IN_BUTTON}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:54:50.413407" elapsed="2.243958"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:53.188922" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/InvalidPINPrevented.png"&gt;&lt;img src="Screenshots/InvalidPINPrevented.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}InvalidPINPrevented.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:54:52.657365" elapsed="0.531746"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:54:50.412413" elapsed="2.776698"/>
+</kw>
+<kw name="Then the user should able to see the incorrect pin notification" owner="Keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:53.478722" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_1}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-08-19T12:54:53.192245" elapsed="0.286477"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:54:53.902479" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/IncorrectPINNotification.png"&gt;&lt;img src="Screenshots/IncorrectPINNotification.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}IncorrectPINNotification.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:54:53.478722" elapsed="0.423757"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:54:53.191210" elapsed="0.711269"/>
+</kw>
+<doc>Negative Test scenario where user enters an Invalid PIN during login.</doc>
+<tag>Regression Tests</tag>
+<status status="PASS" start="2024-08-19T12:54:22.382666" elapsed="31.522441"/>
+</test>
+<test id="s1-t2" name="TC002 Login M-pesa App using Valid Pin" line="17">
+<kw name="SignIN M-pesa App" owner="Keywords">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=2850bf41</arg>
+<arg>appPackage=com.safaricom.mpesa.lifestyle</arg>
+<arg>appActivity=com.mpesa.splash.SplashActivity</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>noReset=true</arg>
+<arg>captureScreenshots=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-08-19T12:54:53.908097" elapsed="9.290075"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:03.767054" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/SignInPage.png"&gt;&lt;img src="Screenshots/SignInPage.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}SignInPage.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:03.198172" elapsed="0.568882"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:54:53.908097" elapsed="9.858957"/>
+</kw>
+<kw name="When the user enters the correct login pin" owner="Keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T12:55:10.781383" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T12:55:03.780937" elapsed="7.000446"/>
+</kw>
+<kw name="Input PIN" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:11.657714" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_1}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:10.781383" elapsed="0.876331"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:11.673336" level="INFO">Clicking element '//android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]'.</msg>
+<msg time="2024-08-19T12:55:12.237201" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_1}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:11.657714" elapsed="0.579487"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:12.244256" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="6"]'.</msg>
+<msg time="2024-08-19T12:55:12.834400" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="6"]</msg>
+<arg>${KEY_${PIN[0]}}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:12.237201" elapsed="0.597199"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T12:55:13.334829" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T12:55:12.834400" elapsed="0.500429"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:13.668904" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_2}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:13.334829" elapsed="0.334075"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:13.668904" level="INFO">Clicking element '//android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]'.</msg>
+<msg time="2024-08-19T12:55:14.156506" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_2}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:13.668904" elapsed="0.487602"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:14.172066" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="5"]'.</msg>
+<msg time="2024-08-19T12:55:14.753266" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="5"]</msg>
+<arg>${KEY_${PIN[1]}}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:14.156506" elapsed="0.596760"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T12:55:15.253743" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T12:55:14.753266" elapsed="0.500477"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:15.610883" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_3}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:15.253743" elapsed="0.357140"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:15.626545" level="INFO">Clicking element '//android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]'.</msg>
+<msg time="2024-08-19T12:55:16.216606" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:15.610883" elapsed="0.605723"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:16.216606" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="4"]'.</msg>
+<msg time="2024-08-19T12:55:16.766584" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="4"]</msg>
+<arg>${KEY_${PIN[2]}}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:16.216606" elapsed="0.549978"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T12:55:17.266989" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T12:55:16.766584" elapsed="0.500405"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:17.630538" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_4}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:17.266989" elapsed="0.363549"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:17.630538" level="INFO">Clicking element '//android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]'.</msg>
+<msg time="2024-08-19T12:55:18.093319" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${PIN_RADIO_BUTTON_4}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:17.630538" elapsed="0.463155"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:18.095086" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="4"]'.</msg>
+<msg time="2024-08-19T12:55:18.691530" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/" and @text="4"]</msg>
+<arg>${KEY_${PIN[3]}}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:18.094060" elapsed="0.597470"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-19T12:55:19.192412" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-19T12:55:18.691530" elapsed="0.500882"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:19.693095" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/PINInputComplete.png"&gt;&lt;img src="Screenshots/PINInputComplete.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}PINInputComplete.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:19.192412" elapsed="0.500683"/>
+</kw>
+<arg>${PIN}</arg>
+<status status="PASS" start="2024-08-19T12:55:10.781383" elapsed="8.911712"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:20.150852" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/CorrectPINEntered.png"&gt;&lt;img src="Screenshots/CorrectPINEntered.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}CorrectPINEntered.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:19.693095" elapsed="0.457757"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:03.779940" elapsed="16.370912"/>
+</kw>
+<kw name="Then the user is now successfully logged in" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:28.553832" level="INFO">xpath criteria: //android.widget.FrameLayout[@content-desc="Home"]
+xpath criteria: //android.widget.FrameLayout[@content-desc="Home"]
+xpath criteria: //android.widget.FrameLayout[@content-desc="Home"]
+xpath criteria: //android.widget.FrameLayout[@content-desc="Home"]
+xpath criteria: //android.widget.FrameLayout[@content-desc="Home"]</msg>
+<arg>${HOME_PAGE_SECTION}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:20.167032" elapsed="8.386800"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:29.298176" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/HomePageAfterLogin.png"&gt;&lt;img src="Screenshots/HomePageAfterLogin.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}HomePageAfterLogin.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:28.553832" elapsed="0.744344"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:20.165995" elapsed="9.132181"/>
+</kw>
+<doc>Positive Test scenario where user enters a valid PIN during login after failed pin.</doc>
+<tag>Regression Tests</tag>
+<status status="PASS" start="2024-08-19T12:54:53.908097" elapsed="35.404564"/>
+</test>
+<test id="s1-t3" name="TC003 Launch M-pesa Mini App" line="23">
+<kw name="Given User want to Navigate to Mini app" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:30.743725" level="INFO">xpath criteria: //android.widget.FrameLayout[@content-desc="Services"]</msg>
+<arg>${SERVICES_SECTION}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:29.315569" elapsed="1.428156"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:31.460731" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/ServicesSectionVisible.png"&gt;&lt;img src="Screenshots/ServicesSectionVisible.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}ServicesSectionVisible.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:30.744795" elapsed="0.715936"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:29.315569" elapsed="2.145162"/>
+</kw>
+<kw name="When user clicks on the services section" owner="Keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:31.465726" level="INFO">Clicking element '//android.widget.FrameLayout[@content-desc="Services"]'.</msg>
+<msg time="2024-08-19T12:55:32.393203" level="INFO">xpath criteria: //android.widget.FrameLayout[@content-desc="Services"]</msg>
+<arg>${SERVICES_SECTION}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:31.464730" elapsed="0.928473"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:31.464730" elapsed="0.929088"/>
+</kw>
+<kw name="Then the user should be able to see the word services" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:35.415595" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/title" and @text="SERVICES"]
+xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/title" and @text="SERVICES"]</msg>
+<arg>${SERVICES_WORD}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:32.396928" elapsed="3.018667"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:35.964603" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/ServicesWordVisible.png"&gt;&lt;img src="Screenshots/ServicesWordVisible.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}ServicesWordVisible.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:35.415595" elapsed="0.549008"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:32.395905" elapsed="3.568698"/>
+</kw>
+<kw name="Then the user should be able to see the search button" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:36.280532" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:35.966867" elapsed="0.313665"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:36.771369" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/SearchButtonVisible.png"&gt;&lt;img src="Screenshots/SearchButtonVisible.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}SearchButtonVisible.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:36.280532" elapsed="0.490837"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:35.966867" elapsed="0.804502"/>
+</kw>
+<kw name="When the user clicks on the search button" owner="Keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:36.774683" level="INFO">Clicking element '//android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]'.</msg>
+<msg time="2024-08-19T12:55:38.584372" level="INFO">xpath criteria: //android.widget.ImageView[@resource-id="com.safaricom.mpesa.lifestyle:id/"][1]</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:36.773647" elapsed="1.810725"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:36.773647" elapsed="1.810725"/>
+</kw>
+<kw name="Then the user should be able to see the search services section" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:39.050531" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.safaricom.mpesa.lifestyle:id/"]</msg>
+<arg>${SEARCH_SERVICES_SECTION}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:38.597819" elapsed="0.452712"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:39.662095" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/SearchServicesSectionVisible.png"&gt;&lt;img src="Screenshots/SearchServicesSectionVisible.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}SearchServicesSectionVisible.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:39.050531" elapsed="0.611564"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:38.597819" elapsed="1.064276"/>
+</kw>
+<kw name="When the user enters the mini-app name on the services section" owner="Keywords">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:39.674147" level="INFO">Typing text 'MDAKTARI' into text field '//android.widget.EditText[@resource-id="com.safaricom.mpesa.lifestyle:id/"]'</msg>
+<msg time="2024-08-19T12:55:40.855897" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.safaricom.mpesa.lifestyle:id/"]</msg>
+<arg>${SEARCH_SERVICES_SECTION}</arg>
+<arg>${MINIAPP_NAME}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:39.673120" elapsed="1.182777"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:41.333520" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/MiniAppSearchEntered.png"&gt;&lt;img src="Screenshots/MiniAppSearchEntered.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}MiniAppSearchEntered.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:40.855897" elapsed="0.477623"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:39.673120" elapsed="1.660400"/>
+</kw>
+<kw name="Then the user should be able to see the MINI-APP searched" owner="Keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:41.934185" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/title"]</msg>
+<arg>${MINI_APP}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-08-19T12:55:41.342044" elapsed="0.592141"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:42.391026" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/MiniAppSearchResults.png"&gt;&lt;img src="Screenshots/MiniAppSearchResults.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}MiniAppSearchResults.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:41.942584" elapsed="0.448442"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:41.342044" elapsed="1.048982"/>
+</kw>
+<kw name="When the user clicks on the MINI-APP searched" owner="Keywords">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:42.400105" level="INFO">Clicking element '//android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/title"]'.</msg>
+<msg time="2024-08-19T12:55:42.787401" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="com.safaricom.mpesa.lifestyle:id/title"]</msg>
+<arg>${MINI_APP}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-08-19T12:55:42.399073" elapsed="0.388328"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-08-19T12:55:43.192664" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/MiniAppOpened.png"&gt;&lt;img src="Screenshots/MiniAppOpened.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}MiniAppOpened.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-08-19T12:55:42.787401" elapsed="0.405263"/>
+</kw>
+<status status="PASS" start="2024-08-19T12:55:42.399073" elapsed="0.793591"/>
+</kw>
+<doc>A scenario where a user plans to use services in particular mini app.</doc>
+<tag>Regression Tests</tag>
+<status status="PASS" start="2024-08-19T12:55:29.314574" elapsed="13.888668"/>
+</test>
+<doc>M-Pesa App Tests</doc>
+<meta name="Author">Enock Odhiambo Omondi</meta>
+<meta name="Version">1.0.0</meta>
+<status status="PASS" start="2024-08-19T12:54:21.932490" elapsed="81.273705"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">Regression Tests</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="TS 003 LaunchMiniapp">TS 003 LaunchMiniapp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
