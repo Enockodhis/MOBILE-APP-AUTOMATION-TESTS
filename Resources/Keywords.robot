@@ -7,7 +7,7 @@ Variables    ./PageObject/TestData/Testdata.py
 
 ${TIMEOUT}    30s
 ${TIMEOUT2}    120s
-${SCREENSHOT_DIR}    ./Screenshots/
+${SCREENSHOT_DIR}    ../Screenshots/
 
 *** Keywords ***
 #Open Application
